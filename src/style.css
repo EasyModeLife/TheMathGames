@@ -1,0 +1,33 @@
+:root {
+  /* New Palette */
+  --dark-blue: #022B3A;
+  --teal: #1f7a8c;
+  --light-blue: #bfdbf7;
+  --off-white: #e1e5f2;
+  --white: #ffffff;
+
+  /* Accent Palette (for feedback) */
+  --bittersweet: #FF715B; /* miss */
+  --sunglow: #F9CB40;    /* bad */
+  --lime: #BCED09;        /* good */
+  --byz-blue: #2F52E0;    /* great */
+
+  /* UI Mapping */
+  --bg: var(--dark-blue);
+  --surface: var(--teal);
+  --surface-alt: #01212e; /* Slightly darker for gradients */
+  --border: var(--teal);
+  --text: var(--off-white);
+  --bar-bg: var(--surface-alt);
+  --input-bg: var(--surface);
+  --input-border: var(--light-blue);
+  --focus: var(--light-blue);
+
+  --accent-warm: var(--sunglow);
+  --accent-hot: var(--bittersweet);
+  --accent-cool: var(--byz-blue);
+  --accent-positive: var(--lime);
+}
+
+body { margin:0; font-family: system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); }
+button { font-family: inherit; }
