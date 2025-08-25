@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=/">
+  </head>
+  <body>
+    <script>
+      // SPA fallback: redirect to index preserving path in history for some static hosts
+    (function(){
+        var l = window.location;
+        if (l.pathname !== '/') {
+          // Put the path in history state and go to root so the app can read it
+      try { sessionStorage.setItem('initial-path', l.pathname); } catch {}
+      history.replaceState({}, '', l.pathname);
+          l.replace('/');
+        }
+      })();
+    </script>
+    <a href="/">Home</a>
+  </body>
+</html>
