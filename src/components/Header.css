@@ -1,0 +1,48 @@
+.app-header {
+  height: clamp(56px, 8vh, 84px);
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.home-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-menu {
+  display: block;
+}
+
+.mobile-dropdown {
+  display: grid;
+  gap: 8px;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}

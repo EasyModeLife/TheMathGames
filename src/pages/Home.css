@@ -1,0 +1,27 @@
+.home
+{ display: grid; gap: 16px; }
+
+.home-list
+{ display: grid; gap: 12px; }
+
+.home-card
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.home-card:hover
+{ background: var(--pill-active); border-color: var(--primary-color); }
+
+.home-card:focus-visible
+{ outline: 2px solid var(--primary-color); outline-offset: 3px; }
+
+.home-card .sub
+{ opacity: .8; font-size: 12px; }

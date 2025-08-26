@@ -1,49 +1,69 @@
-# The Math Games (Svelte)
+# React + TypeScript + Vite
 
-A lightweight, ad‑free, and modular math trainer. Rewritten with Svelte + Vite.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Tech Stack
-- Svelte 4
-- Vite
-- TypeScript
+Currently, two official plugins are available:
 
-## Development
-Install dependencies and start the dev server:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-npm run dev
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-Vite usually serves at: http://localhost:5173
-
-## Structure
-```
-src/
-  App.svelte         # App shell + routing
-  Trainer.svelte     # Core training logic and flow
-  main.ts            # Bootstrap
-  style.css          # Base styles
-```
-
-## Current Features
-- Operation selection (+ - x /)
-- Range and total configuration
-- Exact-division generation
-- Auto validation with immediate advance
-- Per-question timer with first-question grace
-- Level progress with penalties on timeout
-
-## Next Steps (Proposed)
-- Persist configuration in localStorage
-- Session history (last N)
-- Infinite practice mode
-- Optional error animations and sounds
-- Weighted operations / progressive difficulty
-- Additional modules (fractions, powers)
-
-## Donations
-If you want to help me continue and maintain this kind of projects, you can support me at [https://ko-fi.com/hugoandresamayachairez](https://ko-fi.com/hugoandresamayachairez).
-
-## License
-This project is under the MIT License. Please give proper credit to the original repository if you use it.
-# TheMathGames

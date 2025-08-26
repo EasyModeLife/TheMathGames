@@ -1,0 +1,13 @@
+.input-correct {
+  border-color: var(--success-color);
+  background-color: color-mix(in srgb, var(--success-color) 15%, transparent);
+}
+
+.input-incorrect {
+  border-color: var(--error-color);
+  background-color: color-mix(in srgb, var(--error-color) 15%, transparent);
+}
+
+.qa-input {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}

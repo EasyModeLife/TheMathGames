@@ -1,7 +1,7 @@
-﻿# The Math Games – Documento de Planeación
+﻿# MathRaining – Documento de Planeación
 
 ## 1. Resumen Ejecutivo
-The Math Games será una plataforma web ligera, sin publicidad ni rastreadores, enfocada en el entrenamiento rápido de habilidades matemáticas básicas y futuras extensiones temáticas. El enfoque central es: experiencia instantánea, cero fricción, interfaz minimalista y modularidad para escalar nuevos módulos (p.ej. Aritmética, Álgebra, Fracciones, etc.).
+MathRaining será una plataforma web ligera, sin publicidad ni rastreadores, enfocada en el entrenamiento rápido de habilidades matemáticas básicas y futuras extensiones temáticas. El enfoque central es: experiencia instantánea, cero fricción, interfaz minimalista y modularidad para escalar nuevos módulos (p.ej. Aritmética, Álgebra, Fracciones, etc.).
 
 ## 2. Objetivo General
 Proveer un entrenador de matemáticas rápido, privado y extensible que permita al usuario practicar operaciones y recibir retroalimentación inmediata sin distracciones.

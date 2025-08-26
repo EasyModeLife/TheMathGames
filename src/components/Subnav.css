@@ -1,0 +1,37 @@
+.subnav {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.subnav-links {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.subnav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: opacity 0.2s, background-color 0.2s;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.subnav-links a:hover {
+  opacity: 1;
+}
+
+.subnav-links a.active {
+  opacity: 1;
+  background: var(--pill-active);
+  border-color: var(--primary-color);
+}
+
+.subnav-links a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
